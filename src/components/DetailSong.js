@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Songs } from '../Context';
 
 export default function DetailSong() {
+  const { songs } = useContext(Songs);
   return (
     <div className='col-span-1 p-3'>
         <h2 className='text-cyan-500 font-bold'> Now Playing </h2>
-        <h2 className='text-neutral-500 text-2xl'>Sing me to left</h2>
+        <h2 className='text-neutral-500 text-2xl'>{songs.name}</h2>
         <div className='flex items-center justify-center mt-16'>
         <img className='h-64' src='https://i.scdn.co/image/ab6761610000e5eb6e50f29c671af8aff68b321d' alt='avatar'/>
   
